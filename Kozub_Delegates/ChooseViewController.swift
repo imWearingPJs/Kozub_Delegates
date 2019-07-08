@@ -8,7 +8,7 @@
 
 import UIKit
 
-// ** This is the "boss" screen that knows everything what information to show on the other screen
+// ** This is the "boss" screen that knows what information to show on the other screen
 // 1 - Create the delegate protocol
 protocol superheroSelectionDelegate {
     //to conform to this protocol, you must implement the following function:
