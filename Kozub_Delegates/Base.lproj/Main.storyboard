@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Kozub_Delegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldM-TR-L2b">
+                                <rect key="frame" x="95" y="689" width="225" height="71"/>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Choose Superhero">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pSz-Ug-zNS"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yvQ-fb-242">
+                                <rect key="frame" x="70" y="200" width="275" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="d4p-F1-Bna"/>
+                                    <constraint firstAttribute="width" constant="275" id="oYA-mR-EQb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yvQ-fb-242" secondAttribute="trailing" constant="69" id="93A-50-Q5x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ldM-TR-L2b" secondAttribute="bottom" constant="102" id="NPb-4a-mhU"/>
+                            <constraint firstItem="yvQ-fb-242" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="156" id="YpJ-hB-P3O"/>
+                            <constraint firstItem="ldM-TR-L2b" firstAttribute="top" secondItem="yvQ-fb-242" secondAttribute="bottom" constant="214" id="ZNA-0i-xys"/>
+                            <constraint firstItem="ldM-TR-L2b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="ZxB-Xa-4Q1"/>
+                            <constraint firstItem="ldM-TR-L2b" firstAttribute="top" secondItem="yvQ-fb-242" secondAttribute="bottom" constant="214" id="sYi-Ux-InO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ldM-TR-L2b" secondAttribute="trailing" constant="94" id="x6Q-w9-DJf"/>
+                            <constraint firstItem="yvQ-fb-242" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="yIB-N5-Bgq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="ldM-TR-L2b" id="2LH-dx-m4d"/>
+                        <outlet property="mainImageView" destination="yvQ-fb-242" id="8L7-d3-oyT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Choose View Controller-->
+        <scene sceneID="fkh-8a-0bx">
+            <objects>
+                <viewController storyboardIdentifier="ChooseViewController" id="oDi-h5-VXV" customClass="ChooseViewController" customModule="Kozub_Delegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dJw-SL-m9o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QlK-Kn-bjM">
+                                <rect key="frame" x="107" y="251" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Icg-im-dU4"/>
+                                    <constraint firstAttribute="height" constant="200" id="boa-sX-jQF"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="batman-1"/>
+                                <connections>
+                                    <action selector="batmanSelected:" destination="oDi-h5-VXV" eventType="touchUpInside" id="3dM-KH-iDz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X37-WN-689">
+                                <rect key="frame" x="107" y="521" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="00Y-Jd-oGB"/>
+                                    <constraint firstAttribute="width" constant="200" id="wm3-3t-TOa"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="superman-1"/>
+                                <connections>
+                                    <action selector="supermanSelected:" destination="oDi-h5-VXV" eventType="touchUpInside" id="IPV-4j-80H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your superhero!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZf-Ss-9Rp">
+                                <rect key="frame" x="72" y="108" width="270" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="4na-vG-QTd"/>
+                                    <constraint firstAttribute="width" constant="270" id="xH3-q4-GFB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="p34-GZ-6gG" firstAttribute="bottom" secondItem="X37-WN-689" secondAttribute="bottom" constant="141" id="67p-Ph-LjK"/>
+                            <constraint firstItem="qZf-Ss-9Rp" firstAttribute="top" secondItem="p34-GZ-6gG" secondAttribute="top" constant="64" id="6SB-B0-Sn2"/>
+                            <constraint firstItem="QlK-Kn-bjM" firstAttribute="top" secondItem="qZf-Ss-9Rp" secondAttribute="bottom" constant="114" id="FGN-oa-ak1"/>
+                            <constraint firstItem="X37-WN-689" firstAttribute="top" secondItem="QlK-Kn-bjM" secondAttribute="bottom" constant="70" id="HAx-yg-biz"/>
+                            <constraint firstItem="p34-GZ-6gG" firstAttribute="trailing" secondItem="QlK-Kn-bjM" secondAttribute="trailing" constant="107" id="NX4-Pt-mYZ"/>
+                            <constraint firstItem="QlK-Kn-bjM" firstAttribute="leading" secondItem="p34-GZ-6gG" secondAttribute="leading" constant="107" id="UlQ-0P-fsM"/>
+                            <constraint firstItem="p34-GZ-6gG" firstAttribute="trailing" secondItem="qZf-Ss-9Rp" secondAttribute="trailing" constant="72" id="Wzq-Kk-9Xe"/>
+                            <constraint firstItem="p34-GZ-6gG" firstAttribute="trailing" secondItem="qZf-Ss-9Rp" secondAttribute="trailing" constant="72" id="XrJ-oz-5qc"/>
+                            <constraint firstItem="QlK-Kn-bjM" firstAttribute="top" secondItem="qZf-Ss-9Rp" secondAttribute="bottom" constant="114" id="cLh-cU-CrG"/>
+                            <constraint firstItem="X37-WN-689" firstAttribute="leading" secondItem="p34-GZ-6gG" secondAttribute="leading" constant="107" id="dM2-55-sYp"/>
+                            <constraint firstItem="p34-GZ-6gG" firstAttribute="trailing" secondItem="X37-WN-689" secondAttribute="trailing" constant="107" id="oQX-pE-f6b"/>
+                            <constraint firstItem="qZf-Ss-9Rp" firstAttribute="leading" secondItem="p34-GZ-6gG" secondAttribute="leading" constant="72" id="ofb-li-xPT"/>
+                            <constraint firstItem="qZf-Ss-9Rp" firstAttribute="leading" secondItem="p34-GZ-6gG" secondAttribute="leading" constant="72" id="pHT-E9-dZ7"/>
+                            <constraint firstItem="qZf-Ss-9Rp" firstAttribute="top" secondItem="p34-GZ-6gG" secondAttribute="top" constant="64" id="rZF-J4-FYc"/>
+                            <constraint firstItem="X37-WN-689" firstAttribute="top" secondItem="QlK-Kn-bjM" secondAttribute="bottom" constant="70" id="u6j-D4-u4m"/>
+                            <constraint firstItem="QlK-Kn-bjM" firstAttribute="top" secondItem="qZf-Ss-9Rp" secondAttribute="bottom" constant="114" id="xyH-CT-cAu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p34-GZ-6gG"/>
+                    </view>
+                    <connections>
+                        <outlet property="batmanButton" destination="QlK-Kn-bjM" id="D5H-OK-wwy"/>
+                        <outlet property="supermanButton" destination="X37-WN-689" id="UMH-N8-yH2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhp-AF-YEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078.2608695652175" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="batman-1" width="456" height="645"/>
+        <image name="superman-1" width="600" height="700"/>
+    </resources>
+</document>
